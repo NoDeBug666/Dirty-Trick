@@ -12,6 +12,7 @@
 
 (用8是因為一個byte可容納256(16^2)個資料)
 */
-
+byte[] bytes = new byte[]{24,23,22,00};
+int ans = 0;
 for (int i = 0; i < 4; i++)
   ans += bytes[i] << i * 2 * 4;
