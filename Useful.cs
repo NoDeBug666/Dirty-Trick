@@ -7,5 +7,8 @@ double result0 = Math.Pow( Input , (1.0 / 8) );
 
 /*
 要取顯示某數到小數點第N(2)位,可以寫
+會自動四捨五入
 */
-string result1 = String.Format("{0:2F}",Data);
+double Data;
+string result1 = String.Format("{0:F2}",Data);
+string result2 = Data.ToString("0.00");
