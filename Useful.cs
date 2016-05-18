@@ -17,3 +17,15 @@ string result2 = Data.ToString("0.00");
 在C#中使用部件 DataGridView ,想要限制其Column不能排序
 */
 this.dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+/*
+擴展方法:
+在C#中,要給一個現成的物件多一些function,如給string增加東西
+可利用擴展方法
+*/
+public static void ExtensionFunc(this string s){
+  Console.WriteLine("[{0}]This is a Extension function.",s);
+}
+string str = "666";
+str.ExtensionFunc();
+
