@@ -29,3 +29,13 @@ public static void ExtensionFunc(this string s){
 string str = "666";
 str.ExtensionFunc();
 
+/*
+如果有複雜的運算式,如Bitwise
+可以選擇把他們分行運算,避免運算符優先順序導致錯誤
+或是太多括弧看到眼花
+*/
+int dat = 666;
+int a1 = 1 << (32 - basic);
+a1--;
+a1 = ~a1;
+a1 = dat & a1;
