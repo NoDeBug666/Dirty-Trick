@@ -12,7 +12,14 @@
 
 (用8是因為一個byte可容納256(16^2)個資料)
 */
+
+//prepare
 byte[] bytes = new byte[]{24,23,22,00};
 int ans = 0;
+//for 迴圈
 for (int i = 0; i < 4; i++)
   ans += bytes[i] << i * 2 * 4;
+//foreach
+int t = 0;
+foreach(var b in bytes)
+  ans += bytes[i] << t++ * 2 * 4;
