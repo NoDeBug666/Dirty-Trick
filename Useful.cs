@@ -39,3 +39,22 @@ int a1 = 1 << (32 - basic);
 a1--;
 a1 = ~a1;
 a1 = dat & a1;
+
+/*
+Graphic繪圖
+如果繪圖時,發現有數字或任何東西畫到圖片範圍之外,想要不動大部分程式碼修正
+可以使用重新定義Transform還有擴大圖片大小
+*/
+Bitmap bmp = new Bitmap(400+10,380);   //擴大你的圖片
+g.TranslateTransform(10, 0, System.Drawing.Drawing2D.MatrixOrder.Append); //更改起點座標
+
+/*
+Graphic.DrawString
+可以定義要以置左對齊還是置右置中
+Far 置右
+Near 置左(預設)
+Center 置中
+如果要控制 垂直方向 ,更改LineAlignment
+*/
+g.DrawString("HelloWorld", this.Font, Brushes.Black, 30, p.Y,
+              new StringFormat() { Alignment = StringAlignment.Far});
