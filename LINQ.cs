@@ -26,3 +26,17 @@ LINQ的查詢可以是動態的,這意味著如果你先設好了LINQ查詢,
 注意如對LINQ查詢用函式 ToArray() ToList() ToEnumerable() 會切斷和資料源的關聯
 */
 
+/*
+-LINQ 最後的select 可以用括弧包起來,然後在裡面寫獨自創立的屬性包裝,
+該包裝最後會轉化成匿名類別,想要存取他記得用var或object
+*/
+var linq =
+                from s in set
+                where s > 100
+                orderby s descending
+                select new
+                {
+                    Data = s,
+                    Index = i++
+                };
+
