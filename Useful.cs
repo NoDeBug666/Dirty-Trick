@@ -58,3 +58,22 @@ Center 置中
 */
 g.DrawString("HelloWorld", this.Font, Brushes.Black, 30, p.Y,
               new StringFormat() { Alignment = StringAlignment.Far});
+
+/*
+階乘 自動增長table版本
+*/
+static List<double> table = new List<double>()
+{
+  1
+};
+ static double fiaction(int sec)
+{
+    //如果值已經存在,直接套用
+     if (table.Count > sec)
+         return table[sec];
+    //不存在則一直創建直到到達
+    int index = table.Count-1;
+    while (index <= sec)
+      table.Add(table[index] * ++index);
+    return table[sec];
+}
