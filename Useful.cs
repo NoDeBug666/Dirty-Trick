@@ -77,3 +77,7 @@ static List<double> table = new List<double>()
       table.Add(table[index] * ++index);
     return table[sec];
 }
+/*
+取得最小值的Index
+*/
+Array.IndexOf(L,Math.Min(L[0],Math.Min(L[1],L[2])));
